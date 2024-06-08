@@ -1,19 +1,22 @@
-
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     {% tailwind_css %}
 </head>
-<body>
+<body class="">
+    <div class="bg-chat-text bg-cover bg-center bg-no-repeat h-[1000px] w-full ">
     {% include 'navbar.html' %}
     <div>
-        <h1 class="text-center text-red-700">hola mundo</h1>
+        <h1 class="text-center text-red-700 text-2xl">hola mundo</h1>
+
     </div>
     {% include 'footer.html' %}
-    
+    </div>
 </body>
+
 </html>

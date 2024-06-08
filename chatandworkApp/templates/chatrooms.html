@@ -1,29 +1,48 @@
-{% include 'navbar.html' %}
 {% load static tailwind_tags %}
+{% include 'navbar.html' %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     {% tailwind_css %}
 </head>
-<h1>estas son las salas de chat</h1>
-<br>
-<h2>salas:</h2>
-<br>
-<ul>
-    <li>
-        <a href="">sala 1</a>
-    </li>
-    <li>
-        <a href="">sala 2</a>
-    </li>
-    <li>
-        <a href="">sala 3</a>
-    </li>
-    <li>
-        <a href="">sala 4</a>
-    </li>
-    <li>
-        <a href="">sala 5</a>
-    </li>
-</ul>
+
+<body class="bg-slate-700">
+    
+    <div class="bg-chat-text bg-cover bg-center bg-no-repeat h-full w-full ">
+        
+        <div class="flex justify-center ">
+            <div class="flex flex-row justify-center bg-white w-4/5 min-h-96 max-h-full bg-opacity-45 border-8 rounded-lg my-10">
+            <div class="flex flex-col text-black ">
+                    <br>
+                    <h2 class="text-2xl text-center">salas:</h2>
+                    <br>
+                    <ul>
+                        <li>
+                            <div class="text-center bg-white w-60 bg-opacity-75 border-r-4 rounded my-5">
+                                <a href="">sala 1</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-center bg-white w-60 bg-opacity-75 border-r-4 rounded my-5">
+                                <a href="">sala 1</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-center bg-white w-60 bg-opacity-75 border-r-4 rounded my-5">
+                                <a href="">sala 1</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-center bg-white w-60 bg-opacity-75 border-r-4 rounded my-5">
+                                <a href="">sala 1</a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

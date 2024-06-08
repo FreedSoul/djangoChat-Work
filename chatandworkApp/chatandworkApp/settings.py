@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,15 +28,20 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
-NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
+if os.name == 'posix':
+    NPM_BIN_PATH = "/home/t-7/.nvm/versions/node/v20.14.0/bin/npm"
+else:
+    NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+
+# print(os.name," is the actual platform")
+# print(NPM_BIN_PATH," is the actual BPM BIN")
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -127,11 +133,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR/'static'
+    # BASE_DIR/'static',
+    os.path.join(BASE_DIR, 'static')
 ]
+print(STATICFILES_DIRS,"este es el directorio base")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
