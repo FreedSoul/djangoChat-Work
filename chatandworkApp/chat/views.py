@@ -7,3 +7,6 @@ def home(request):
 
 def chat_rooms(request):
     return render(request, 'chatrooms.html')
+
+def login(request):
+    return render(request, 'login.html')
