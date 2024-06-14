@@ -108,4 +108,7 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
+# custom
 node_modules
+chatandworklinux
+chatandwork
