@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login UI</title>
+    <title>Login</title>
     {% tailwind_css %}
 </head>
 
@@ -14,14 +14,17 @@
     {% include 'navbar.html' %}
     <div class="bg-gradient-to-r from-purple-400 to-blue-500 min-h-screen flex items-center justify-center">
         <div class=" bg-white bg-opacity-30 backdrop-filter backdrop-blur-md p-8 rounded-lg shadow-lg w-4/5 max-w-md">
-            <div class="flex justify-between items-center mb-6">
-                <h1 class="text-3xl font-bold text-white">Chat & Work</h1>
-                <div class="flex ">
-                    <button class="text-white bg-purple-500 py-1 px-3 rounded-l-lg focus:outline-none">sign up</button>
-                    <button class="text-purple-500 bg-white py-1 px-3 rounded-r-lg focus:outline-none">login</button>
+            <form id="new-room" method="POST" action="">
+                {% csrf_token %}
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-white">Chat & Work</h1>
+                    <div class="flex ">
+                        <button class="text-white bg-purple-500 py-1 px-3 rounded-l-lg focus:outline-none">sign
+                            up</button>
+                        <button
+                            class="text-purple-500 bg-white py-1 px-3 rounded-r-lg focus:outline-none">login</button>
+                    </div>
                 </div>
-            </div>
-            <form>
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2" for="name">Name</label>
                     <input

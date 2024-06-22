@@ -1,15 +1,5 @@
 {% load static %}
-<!-- <header class="header">
-    <div class="logo">
-        <img src="{% static 'images/logo_trimmed.JPG' %}" alt="logo chat and work">
-    </div>
-    <nav class="nav-links">
-        <a href="#login">Login</a>
-        <a href="{% url 'chatrooms' %}">Chat Room</a>
-        <a href="#logout">Log Out</a>
-        <a href="#others">Others</a>
-    </nav>
-</header> -->
+
 <header class="bg-gradient-to-r from-blue-500 to-green-500 text-white p-4 flex justify-between items-center">
     <!-- Logo -->
     <div class="flex items-center">
@@ -23,8 +13,8 @@
     <nav class="flex space-x-6 ">
       <a href="{% url 'login' %}" class="hover:text-gray-300">Login</a>
       <a href="{% url 'chatrooms' %}" class="hover:text-gray-300">Chat Room</a>
+      <a href="{% url 'newroom' %}" class="hover:text-gray-300">New room</a>
       <!-- executar funcion de salida y a home -->
       <a href="{% url 'login' %}" class="hover:text-gray-300">Log Out</a>
-      <a href="#others" class="hover:text-gray-300">Others</a>
     </nav>
   </header>
