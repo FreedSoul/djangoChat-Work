@@ -11,35 +11,38 @@
 </head>
 
 <body>
-    {% include 'navbar.html' %}
-    <div class="bg-gradient-to-r from-purple-400 to-blue-500 min-h-screen flex items-center justify-center">
-        <div class=" bg-white bg-opacity-30 backdrop-filter backdrop-blur-md p-8 rounded-lg shadow-lg w-4/5 max-w-md">
-            <form method="post" action="/newroom/register_room">
-                {% csrf_token %}
-                <div class="flex justify-between items-center mb-6">
-                    <h1 class="text-3xl font-bold text-white">Chat & Work</h1>
+    <div class="bg-chat-text bg-cover bg-center bg-no-repeat h-full w-full ">
+        {% include 'navbar.html' %}
+        <div class=" min-h-screen flex items-center justify-center">
+            <div
+                class=" bg-white bg-opacity-30 backdrop-filter backdrop-blur-md p-8 rounded-lg shadow-lg w-4/5 max-w-md">
+                <form method="post" action="/newroom/register_room">
+                    {% csrf_token %}
+                    <div class="flex justify-between items-center mb-6">
+                        <h1 class="text-3xl font-bold text-white text-center">Create a New Room</h1>
+                        
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2" for="name">Room</label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            name="room_name" id="room_name" type="text" placeholder="John Doe's Room">
+                    </div>
+                    <div class="mb-4 ">
+                        <label class="block text-white text-sm font-bold mb-2" for="login">Name</label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            name="username" id="username" type="text" placeholder="richard">
+                    </div>
                     <div class="flex ">
                         <button class="text-white bg-purple-500 py-1 px-3 rounded-lg focus:outline-none"
-                            type="submit" >Create Room</button>
+                            type="submit">Create Room</button>
                     </div>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-white text-sm font-bold mb-2" for="name">Room</label>
-                    <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        name="room_name" id="room_name" type="text"  placeholder="John Doe's Room">
-                </div>
-                <div class="mb-4 ">
-                    <label class="block text-white text-sm font-bold mb-2" for="login">Name</label>
-                    <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        name="username" id="username" type="text" placeholder="richard">
-                </div>
-
-            </form>
+                </form>
+            </div>
         </div>
+        {% include 'footer.html' %}
     </div>
-    {% include 'footer.html' %}
 </body>
 
 </html>

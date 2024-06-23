@@ -1,0 +1,75 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% tailwind_css %}
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="bg-gradient-to-r from-purple-400 to-blue-500 min-h-screen flex items-center justify-center">
+        <div class=" bg-white bg-opacity-30 backdrop-filter backdrop-blur-md p-8 rounded-lg shadow-lg w-4/5 max-w-md">
+            <form id="new-room" method="POST" action="">
+                {% csrf_token %}
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-white">Chat & Work</h1>
+                    <div class="flex ">
+                        <button class="text-white bg-purple-500 py-1 px-3 rounded-l-lg focus:outline-none">sign
+                            up</button>
+                        <button
+                            class="text-purple-500 bg-white py-1 px-3 rounded-r-lg focus:outline-none">login</button>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="name">Name</label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="name" type="text" placeholder="John Doe">
+                </div>
+                <div class="mb-4 ">
+                    <label class="block text-white text-sm font-bold mb-2" for="login">Login</label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="login" type="text" placeholder="login26302">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="email">E-mail</label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="email" type="email" placeholder="exemple@email.com">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="password">Password</label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="password" type="password" placeholder="********">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2" for="confirm">Confirm Password</label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="confirm" type="password" placeholder="********">
+                </div>
+                <div class="mb-4 flex items-center">
+                    <input class="mr-2 leading-tight" type="checkbox" id="terms">
+                    <label class="text-white text-sm" for="terms">I have accepted the terms and conditions</label>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        Sign Up
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>
