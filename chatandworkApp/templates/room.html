@@ -10,25 +10,28 @@
 </head>
 
 <body class="">
-    {% include 'navbar.html' %}
-    <div class="bg-gradient-to-r from-purple-400 to-blue-500 min-h-screen flex items-center justify-center">
-        <div class=" bg-white bg-opacity-30 backdrop-filter backdrop-blur-md p-8 rounded-lg shadow-lg w-11/12 ">
-            <form id="new-room" method="POST" action="">
+    <div class="bg-chat-text bg-cover bg-center bg-no-repeat h-full w-full ">
+        {% include 'navbar.html' %}
+        <div class=" min-h-screen flex items-center justify-center">
+            <div class=" bg-gradient-to-r from-violet-600 to-indigo-600/25 bg-opacity-30 backdrop-filter backdrop-blur-md p-8 my-6 rounded-lg shadow-lg w-11/12 ">
+                <form id="new-room" method="POST" action="">
 
-                <div class="flex justify-between items-center mb-6">
-                    <h1 class="text-5xl font-bold text-white ">{{ room }}</h1>
-                </div>
-                <div class="flex ">
-                    <div class="text-white bg-purple-500 py-1 px-3 rounded-l-lg focus:outline-none text-sm ">Administrador</div>
-                    <div class="text-purple-500 bg-white py-1 px-3 rounded-r-lg focus:outline-none text-sm">{{ user }}</div>
-                </div>
-                <div class="my-6">
-                    <label class="block text-white text-4xl font-bold mb-2" for="name">chat</label>
-                    <div
-                        class="shadow appearance-none border rounded w-full h-60 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="name" type="text" placeholder="{{ user }}"></div>
-                </div>
-            </form>
+                    <div class="flex justify-between items-center mb-6">
+                        <h1 class="text-4xl font-bold text-white ">{{ room }}</h1>
+                    </div>
+                    <div class="flex ">
+                        <div class="text-white bg-purple-500 py-1 px-3 rounded-l-lg focus:outline-none text-sm ">
+                            Administrador</div>
+                        <div class="text-purple-500 bg-white py-1 px-3 rounded-r-lg focus:outline-none text-sm">{{ user
+                            }}</div>
+                    </div>
+                    <div class="my-6">
+                        <label class="block text-white text-xl font-bold mb-2" for="name">chat</label>
+                        <div class="bg-chat-text  border-white border-2 rounded min-w-max h-[60rem] py-2 px-3 text-gray-700  focus:outline-none focus:shadow-outline"
+                            id="name" type="text" placeholder="{{ user }}"></div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     {% include 'footer.html' %}
