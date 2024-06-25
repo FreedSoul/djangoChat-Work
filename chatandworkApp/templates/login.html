@@ -14,7 +14,7 @@
     <div class="bg-chat-text bg-cover bg-center bg-no-repeat h-full w-full ">
     {% include 'navbar.html' %}
     <div class=" min-h-screen flex items-center justify-center">
-        <div class=" bg-white bg-opacity-30 backdrop-filter backdrop-blur-md p-8 rounded-lg shadow-lg w-4/5 max-w-md">
+        <div class=" bg-gradient-to-r from-violet-600/85 to-indigo-600/25 bg-opacity-30 backdrop-filter backdrop-blur-md p-8 rounded-lg shadow-lg w-4/5 max-w-md">
             <form id="new-room" method="POST" action="">
                 {% csrf_token %}
                 <div class="flex justify-center items-center mb-6">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="flex items-center justify-between">
                     <button
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        class="bg-teal-700 hover:bg-teal-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         type="button">
                         Login
                     </button>

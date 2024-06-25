@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from chat.models import Room
 from django.template import loader
 
@@ -8,7 +8,11 @@ def home(request):
     return render(request, 'home.html')
 
 def chat_rooms(request):
-    return render(request, 'chatrooms.html')
+    allrooms = Room.objects.all()    
+    context = {
+        'rooms': allrooms
+    }
+    return render(request, 'chatrooms.html', context)
 
 def signup(request):
     return render(request, 'signup.html')
@@ -17,11 +21,14 @@ def login(request):
     return render(request, 'login.html')
 
 def room(request, room):
-    user = request.GET['username']
+    #if the keyvalue is not secure must use request.GET.get('key','mydefaultincasedoesntexist')
+    user = request.GET.get('username','')
+    get_object_or_404(Room, name=room)
     context = {
         'user': user,
         'room': room
     }
+    # print("esto es getroom",getroom)
     return render(request, 'room.html', context)
 
 def newroom(request):
