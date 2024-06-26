@@ -47,6 +47,7 @@ module.exports = {
         "chat-texture": "url('../../../static/images/vertical-bg-texture.jpg')",
         "chat-text": "url('../../../static/images/chat-bg-texture2.jpg')",
         "banner": "url('../../../static/images/chat-bg-texture.jpg')",
+        "hero-image": "url('../../../static/images/grouppeople-nobg2.png')",
         // "footer-texture": "url('/img/footer-texture.png')",
       },
     },
