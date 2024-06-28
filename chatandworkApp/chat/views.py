@@ -46,3 +46,11 @@ def register_room(request):
         new_room = Room.objects.create(name=room)
         new_room.save()
         return redirect('/'+room+'/?username='+user)
+
+def sendmessage(request):
+    message = request.POST['message']
+    # room = request.POST['room']
+    # username = request.POST['username']
+
+    # print(message, room, username)
+    return HttpResponse('Message sent successfully')
