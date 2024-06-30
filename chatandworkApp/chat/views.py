@@ -49,7 +49,7 @@ def register_room(request):
 
 def sendmessage(request):
     message = request.POST['message']
-    # room = request.POST['room']
+    room = request.POST['room']
     # username = request.POST['username']
 
     # print(message, room, username)
