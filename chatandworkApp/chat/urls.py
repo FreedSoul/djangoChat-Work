@@ -9,6 +9,7 @@ urlpatterns = [
     path('chatrooms/',views.chat_rooms,name='chatrooms'),
     path('newroom/', views.newroom, name="newroom"),
     path('newroom/register_room',views.register_room,name='register_room'),
+    path('getmessages/<str:room>/', views.getmessages, name="getmessage"),
     path('<str:room>/', views.room, name="room"),
 ]
 
